@@ -1,0 +1,88 @@
+[flake8]
+max-line-length = 120
+ignore =
+  # E402
+  # Line too long
+  E501,
+  # Line break occurred before a binary operator
+  W503,
+  # Function is too complex
+  C901
+per-file-ignores =
+  elysium/__main__.py: E402
+  elysium/api/mysql/mysql_proxy/libs/constants/mysql.py: E241
+exclude =
+  __init__.py,
+  build/*
+  elysium/microservices_grpc/*
+  # TODO: clean up this code
+  elysium/integrations/handlers/access_handler/access_handler.py
+  elysium/integrations/handlers/airtable_handler/airtable_handler.py
+  elysium/integrations/handlers/bigquery_handler/tests/test_bigquery_handler.py
+  elysium/integrations/handlers/couchbase_handler/couchbase_handler.py
+  elysium/integrations/handlers/couchbase_handler/tests/test_couchbase_handler.py
+  elysium/integrations/handlers/crate_handler/crate_handler.py
+  elysium/integrations/handlers/crate_handler/tests/test_crate_handler.py
+  elysium/integrations/handlers/d0lt_handler/tests/test_d0lt_handler.py
+  elysium/integrations/handlers/databricks_handler/databricks_handler.py
+  elysium/integrations/handlers/datastax_handler/datastax_handler.py
+  elysium/integrations/handlers/db2_handler/*
+  elysium/integrations/handlers/druid_handler/druid_handler.py
+  elysium/integrations/handlers/dynamodb_handler/dynamodb_handler.py
+  elysium/integrations/handlers/elasticsearch_handler/elasticsearch_handler.py
+  elysium/integrations/handlers/firebird_handler
+  elysium/integrations/handlers/firebird_handler/firebird_handler.py
+  elysium/integrations/handlers/hive_handler/tests/test_hive_handler.py
+  elysium/integrations/handlers/informix_handler/informix_handler.py
+  elysium/integrations/handlers/informix_handler/tests/test_informix_handler.py
+  elysium/integrations/handlers/lightwood_handler/*
+  elysium/integrations/handlers/ludwig_handler/test_ludwig.py
+  elysium/integrations/handlers/mariadb_handler/tests/test_mariadb_handler.py
+  elysium/integrations/handlers/matrixone_handler/*
+  elysium/integrations/handlers/mlflow_handler/*
+  elysium/integrations/handlers/monetdb_handler/*
+  elysium/integrations/handlers/mongodb_handler/*
+  elysium/integrations/handlers/mssql_handler/*
+  elysium/integrations/handlers/mysql_handler/tests/test_mysql_handler.py
+  elysium/integrations/handlers/oracle_handler/oracle_handler.py
+  elysium/integrations/handlers/pinot_handler/pinot_handler.py
+  elysium/integrations/handlers/postgres_handler/tests/test_postgres_handler.py
+  elysium/integrations/handlers/questdb_handler/*
+  elysium/integrations/handlers/redshift_handler/*
+  elysium/integrations/handlers/s3_handler/s3_handler.py
+  elysium/integrations/handlers/singlestore_handler/*
+  elysium/integrations/handlers/snowflake_handler/snowflake_handler.py
+  elysium/integrations/handlers/sqlite_handler/sqlite_handler.py
+  elysium/integrations/handlers/supabase_handler/tests/test_supabase_handler.py
+  elysium/integrations/handlers/tidb_handler/*
+  elysium/integrations/handlers/timescaledb_handler/*
+  elysium/integrations/handlers/trino_handler/trino_handler.py
+  elysium/integrations/handlers/vertica_handler/*
+  elysium/integrations/handlers/view_handler/view_handler.py
+  elysium/integrations/handlers/yugabyte_handler/*
+  elysium/integrations/handlers/opengauss_handler/*
+  elysium/integrations/libs/response.py
+  elysium/integrations/utilities/utils.py
+  elysium/interfaces/model/model_controller.py
+  elysium/migrations/env.py
+  elysium/utilities/log.py
+  tests/handler_tests/test_storage_handler.py
+  tests/integration_tests/flows/test_mysql_bin_api.py
+  tests/prediction_latency_test/*
+  tests/unit/executor_test_base.py
+  tests/unit/test_cache.py
+  tests/unit/test_mongodb_handler.py
+  tests/unit/test_mongodb_server.py
+  tests/unit/ml_handlers/test_huggingface.py
+  tests/unit/ml_handlers/test_mlflow.py
+  tests/unit/ml_handlers/test_huggingface.py
+  tests/unit/ml_handlers/test_ludwig.py
+  tests/unit/ml_handlers/test_lightwood.py
+  tests/unit/test_predictor_params.py
+  tests/unit/test_project_structure.py
+  tests/unit/test_merlion_handler.py
+  elysium/integrations/handlers/byom_handler/byom_handler.py
+  elysium/integrations/handlers/byom_handler/proc_wrapper.py
+  elysium/integrations/handlers/*
+
+max-complexity = 18

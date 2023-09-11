@@ -1,0 +1,17 @@
+version: "3.2"
+
+services:
+
+  migrations:
+    command: bash -c "cd /mindsdb && python ./mindsdb/migrations/migrate.py"
+
+    <<: &globalSettings
+      build:
+        context: ../
+        dockerfile: ./docker/mindsdb.Dockerfile
+      volumes:
+        - type: bind
+          source: ../
+          target: /mindsdb
+      environment:
+        MINDSDB_STORAGE_DIR: "/mindsdb/var"

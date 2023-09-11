@@ -1,0 +1,19 @@
+version: "3.2"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: "mindsdb"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      PGPORT: 15432
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 1s
+      timeout: 1s
+      retries: 15
+
+  migrations:
+    command: bash -c "cd /mindsdb && python ./mindsdb/migrations/migrate.py"
