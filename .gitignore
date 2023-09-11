@@ -1,55 +1,19 @@
-**/*.pyc
-*__pycache__*
-var
-etc
-.idea
-mindsdb/logs
-mindsdb/logs
-logs
-tests/temp
-/integration_tests/flows/config/*
-my_model.zip
-model.py
-tests/integration_tests/flows/model.py
-tests/integration_tests/flows/my_model.zip
-distributions/docker-compose/*/storage
-venv/*
-env/*
-mindsdb-venv/*
-root
-static
-tmp
-.pytest_cache
-tests/prediction_latency_test/*.csv
-storage_dir
-docker/dist/*
-.directory
-MindsDB.egg-info/*
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pyz
+*.pyzw
 
-# Autokeras generated files
-auto_model
-autokeras
-structured_data_classifier
-structured_data_regressor
-mindsdb/integrations/handlers/autokeras_handler/structured_data_classifier
+# Jupyter Notebook
+.ipynb_checkpoints/
 
-# VisualStudioCode
-.vscode
-.vscode/*
-.history
-doc/lib/
-run.csh
+# VS Code
+.vscode/
 
-# Virtualenv
-bin
-lib
-lib64
-pyvenv.cfg
-.python-version
+# PyCharm
+.idea/
+
+# macOS
 .DS_Store
-Scripts
-Include
-xgboost
-
-# Docs
-node_modules
