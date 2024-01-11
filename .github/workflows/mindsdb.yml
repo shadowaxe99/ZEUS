@@ -1,4 +1,20 @@
-name: MindsDB Tests & Deploy
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+  # pull_request_target:
+  pull_request:
+    branches: [stable, staging]
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+
+jobs:
+  fix_dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/fix_dependencies.yml
 
 on:
   push:
